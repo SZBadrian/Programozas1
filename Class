@@ -1,0 +1,32 @@
+using System;
+
+namespace MyApplication
+{
+    public class Ososztaly
+    {
+        public static int randNum;
+        public Ososztaly()
+        {
+            Random rnd = new Random();
+            randNum = rnd.Next(1, 100);
+        }
+    }
+    public class Osztaly : Program 
+    {
+        public static void Rend()
+        {
+            for (int j = tombhossza - 1; j > 0; j--)
+            {
+                for (int k = 0; k < j; k++)
+                {
+                    if (tomb[k] > tomb[k + 1])
+                    {
+                        int s = tomb[k + 1];
+                        tomb[k + 1] = tomb[k];
+                        tomb[k] = s;
+                    }
+                }
+            }
+        }
+    }
+}
